@@ -56,7 +56,7 @@ class AuthController extends Controller
     {
         $token = request()->user()?->currentAccessToken();
 
-        if ($token && method_exists($token, 'delete')) {
+        if ($token) {
             $token->delete();
         }
 
