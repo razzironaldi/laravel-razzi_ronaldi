@@ -1,0 +1,61 @@
+{
+  "info": {
+    "name": "Laravel Product API - Razzi Ronaldi",
+    "description": "Postman Collection untuk modul Product",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "variable": [
+    {
+      "key": "base_url",
+      "value": "http://127.0.0.1:8000"
+    },
+    {
+      "key": "token",
+      "value": ""
+    }
+  ],
+  "item": [
+    {
+      "name": "Register",
+      "request": {
+        "method": "POST",
+        "url": "{{base_url}}/api/register"
+      }
+    },
+    {
+      "name": "Login",
+      "request": {
+        "method": "POST",
+        "url": "{{base_url}}/api/login"
+      }
+    },
+    {
+      "name": "Product List",
+      "request": {
+        "method": "GET",
+        "url": "{{base_url}}/api/products?per_page=10&search=&category=&is_active=1"
+      }
+    },
+    {
+      "name": "Create Product",
+      "request": {
+        "method": "POST",
+        "url": "{{base_url}}/api/products"
+      }
+    },
+    {
+      "name": "Update Product",
+      "request": {
+        "method": "PUT",
+        "url": "{{base_url}}/api/products/1"
+      }
+    },
+    {
+      "name": "Delete Product",
+      "request": {
+        "method": "DELETE",
+        "url": "{{base_url}}/api/products/1"
+      }
+    }
+  ]
+}
